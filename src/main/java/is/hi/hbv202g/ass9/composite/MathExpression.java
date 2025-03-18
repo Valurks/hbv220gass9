@@ -1,5 +1,5 @@
 package is.hi.hbv202g.ass9.composite;
 
 public interface MathExpression {
-    public double getResult();
+    public int getResult();
 }
