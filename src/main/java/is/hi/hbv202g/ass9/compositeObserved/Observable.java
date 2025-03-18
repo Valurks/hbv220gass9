@@ -9,4 +9,18 @@ abstract class Observable {
     public Observable(List<Observer> observers) {
         this.observers = observers;
     }
+
+    public void attach(Observer observer) {
+        observers.add(observer);
+    }
+
+    public void detach(Observer observer) {
+        observers.remove(observer);
+    }
+
+    public void notifyObservers() {
+        for (Observer observer : observers) {
+            observer.getResult();
+        }
+    }
 }
