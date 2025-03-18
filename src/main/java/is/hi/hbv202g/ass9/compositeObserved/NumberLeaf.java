@@ -1,6 +1,6 @@
 package is.hi.hbv202g.ass9.compositeObserved;
 
-public class NumberLeaf implements Observer {
+public class NumberLeaf implements MathExpression, Observer {
 
     private int value;
 
