@@ -1,14 +1,14 @@
 package is.hi.hbv202g.ass9.composite;
 
-public class NumberLeaf {
+public class NumberLeaf implements MathExpression{
 
-    private int value;
+    private final int value;
 
     public NumberLeaf(int value) {
         this.value = value;
     }
 
-    public int getResult() {
+    public double getResult() {
         return value;
     }
 }
