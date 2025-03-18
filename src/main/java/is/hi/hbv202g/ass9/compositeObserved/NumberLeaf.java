@@ -11,4 +11,7 @@ public class NumberLeaf implements MathExpression {
     public int getResult() {
         return value;
     }
+    public void setValue(int value) {
+    	this.value = value;
+    }
 }
