@@ -2,7 +2,7 @@ package is.hi.hbv202g.ass9.compositeObserved;
 
 import java.util.List;
 
-abstract class Observable {
+public abstract class Observable {
 
     private List<Observer> observers;
 
@@ -20,7 +20,7 @@ abstract class Observable {
 
     public void notifyObservers() {
         for (Observer observer : observers) {
-            observer.getResult();
+            observer.update();
         }
     }
 }

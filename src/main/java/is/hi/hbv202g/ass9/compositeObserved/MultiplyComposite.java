@@ -3,12 +3,13 @@ package is.hi.hbv202g.ass9.compositeObserved;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MultiplyComposite implements MathExpression {
+public class MultiplyComposite implements Observer {
 
     private final List<MathExpression> children = new ArrayList<>();
+    private int result;
 
     public int getResult() {
-        int result = 1;
+        result = 1;
         for (MathExpression child : children) {
             result *= child.getResult();
         }
@@ -25,5 +26,13 @@ public class MultiplyComposite implements MathExpression {
 
     public List<MathExpression> getChildren() {
         return children;
+    }
+
+    public void update() {
+        getResult();
+    }
+
+    public int getLastObservedResult() {
+        return result;
     }
 }
