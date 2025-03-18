@@ -1,17 +1,17 @@
-package is.hi.hbv202g.ass9.compositeObserved;
+package is.hi.hbv202g.ass9.compositeObservedTemplateMethod;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class PlusComposite implements MathExpression, Observer{
+public class MultiplyComposite implements MathExpression, Observer {
 
     private final List<MathExpression> children = new ArrayList<>();
     private int lastObservedResult;
 
     public int getResult() {
-        int result = 0;
+        int result = 1;
         for (MathExpression child : children) {
-            result += child.getResult();
+            result *= child.getResult();
         }
         return result;
     }

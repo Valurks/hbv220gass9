@@ -1,9 +1,9 @@
-package is.hi.hbv202g.ass9.compositeObserved;
+package is.hi.hbv202g.ass9.compositeObservedTemplateMethod;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class PlusComposite implements MathExpression, Observer{
+public class PlusComposite implements MathExpression, Observer {
 
     private final List<MathExpression> children = new ArrayList<>();
     private int lastObservedResult;

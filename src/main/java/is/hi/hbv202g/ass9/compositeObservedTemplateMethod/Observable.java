@@ -1,4 +1,4 @@
-package is.hi.hbv202g.ass9.compositeObserved;
+package is.hi.hbv202g.ass9.compositeObservedTemplateMethod;
 
 import java.util.ArrayList;
 import java.util.List;

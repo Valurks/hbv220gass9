@@ -3,7 +3,7 @@ package is.hi.hbv202g.ass9.compositeObserved;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MultiplyComposite implements MathExpression, Observer {
+public class MultiplyComposite implements MathExpression, Observer{
 
     private final List<MathExpression> children = new ArrayList<>();
     private int lastObservedResult;
@@ -29,7 +29,8 @@ public class MultiplyComposite implements MathExpression, Observer {
     }
 
     public void update() {
-        getResult();
+        lastObservedResult = getResult();
+        System.out.println("New value observed: " + lastObservedResult);
     }
 
     public int getLastObservedResult() {
