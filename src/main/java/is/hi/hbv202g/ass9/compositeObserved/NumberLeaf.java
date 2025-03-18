@@ -8,7 +8,7 @@ public class NumberLeaf implements MathExpression {
         this.value = value;
     }
 
-    public double getResult() {
+    public int getResult() {
         return value;
     }
 }
