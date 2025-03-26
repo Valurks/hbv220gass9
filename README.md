@@ -1,36 +1,28 @@
-# Assignment 10 – Composite Pattern
-This project demonstrates the use of the **Composite Design Pattern** in Java.  
-It evaluates arithmetic expressions using a combination of `NumberLeaf`, `PlusComposite`, and `MultiplyComposite` components.
+# HBV202GAssignment9
+A project skeleton for implementing the *Composite* pattern and the *Observer* pattern 
+(and some sort of *Template Method* pattern) based on tests using JUnit4.
 
-## Overview
-The example implemented in `Main.java` evaluates the expression:
+This project is a Maven project, i.e. it uses the standard Maven project structure that your IDE should understand 
+when you `git clone` it. The provided Maven POM includes the JUnit4 dependency.
 
-This is achieved by:
-- Creating leaf nodes for numbers
-- Combining them using composite nodes for addition and multiplication
-- Evaluating the expression via `getResult()` calls
+Both the implementation and the tests are in Java package `is.hi.hbv202g.ass9`,  
+but in the usual separate Maven `src` directories:
 
-## Prerequisites
+- `src/main/java`:
+  - `is.hi.hbv202g.ass9.composite`: Your implementation of the *Composite* pattern has to go there. 
+    Choose class, interface, and method names so that they fit the provided test cases.
+  - `is.hi.hbv202g.ass9.compositeObserved`: Your implementation of the *Composite* pattern that is combined with the 
+    *Observable* patterns has to go there. Choose class, interface, and method names so that they fit the provided test cases.
+  - `is.hi.hbv202g.ass9.compositeObservedTemplateMethod`: Your refactoring of the above patterns inspired by the *Template Method* pattern.
+- `src/test/java`: (each package contains an `Alltests` class that collects all the test cases for the respective 
+  package in one test suite, so that you can execute exactly only the testcase of the package that you are currently implementing),
+  - `is.hi.hbv202g.ass9.composite`: Test cases testing a composite implementation.
+  - `is.hi.hbv202g.ass9.compositeObserved`: Test cases testing an implementation of a composite where the leafs are 
+   observed by the composite implementation.
+  - `is.hi.hbv202g.ass9.compositeObservedTemplateMethod`: The same test cases for testing the refactoring of the 
+     above patterns inspired by the *Template Method* pattern.
 
-- Java 17 or higher
-- Apache Maven
-
-# ▶How to Run
-The `pom.xml` file is configured with the `exec-maven-plugin`.
-
-# License
-This project is licensed under the MIT License.
-It includes contributions by Adam and Valur, and Helmut Neukirchen, the original author of the template repository.
-
-Link to the license:
-file:///Users/adamkrystian/Documents/School%20Projects/JavaFX%202025/Assignment10/target/site/licenses.html
-
-# Documentation
-You can generate full documentation including Javadoc and license details by running:
-
-#### mvn site
-
-### Then open the generated site with:
-- open target/site/index.html      # macOS
-- start target\site\index.html     # Windows
-Navigate to Project Reports > JavaDoc to view generated documentation for all classes and methods, including Main.
+- `mvn compile` compiles all implementation classes.
+- `mvn test` runs all test cases (i.e. all classes with a name that either starts with `Test` or ends with `Test`, 
+  `Tests`, or `TestCase`). As long as you have not finished implementing all packages, it is better to use the IDE to
+  run individual test cases or package-level test suites.
