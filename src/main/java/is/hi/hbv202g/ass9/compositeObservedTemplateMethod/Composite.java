@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Composite implements MathExpression, Observer {
-
     protected final List<MathExpression> children = new ArrayList<>();
     protected int lastObservedResult;
 
@@ -28,16 +27,4 @@ public abstract class Composite implements MathExpression, Observer {
     public int getLastObservedResult() {
         return lastObservedResult;
     }
-
-    public final int getResult() {
-        int result = startingValue();
-        for (MathExpression child : children) {
-            result = calculate(result, child.getResult());
-        }
-        return result;
-    }
-
-    protected abstract int startingValue();
-
-    protected abstract int calculate(int result, int value);
 }
